@@ -11,7 +11,7 @@ extension Int {
         }
     }
     
-    func times(f: (Int) -> Void) {
+    func until(f: (Int) -> Void) {
         for i in 0...self {
             f(i)
         }
