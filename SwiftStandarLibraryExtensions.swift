@@ -50,3 +50,14 @@ extension Array {
         return (count > 0) ? (self[0], Array(self[1..<count])) : nil
     }
 }
+
+extension Array {
+    func all(f: T -> Bool) -> Bool {
+        for x in self {
+            if !f(x) {
+                return false
+            }
+        }
+        return true
+    }
+}
